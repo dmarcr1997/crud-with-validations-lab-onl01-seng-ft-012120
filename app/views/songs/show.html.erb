@@ -1,0 +1,11 @@
+<div class="song">
+<span>
+<h1><%=@song.title%></h1>
+<h2><%= @song.artist_name%></h2>
+<p><%= @song.release_year%></p>
+<p><%= @song.genre%></p>
+</span>
+<%=link_to "Delete", @song, method: :delete, data: {confirm: "Really?"}%>
+</div>
+<%= link_to 'Edit', edit_song_path(@song.id) %>
+<%= link_to 'Back', songs_path %>
